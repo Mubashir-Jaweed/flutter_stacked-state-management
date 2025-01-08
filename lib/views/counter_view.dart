@@ -17,13 +17,16 @@ class CounterView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   spacing: 40,
                   children: [
-                    Text('Counter Value'),
+                    Text(viewModel.counterService.counterValue.toString()),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        viewModel.addValue();
+                      },
                       child: Text('Add Counter Value'),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        viewModel.navigateToHome();                      },
                       child: Text('Navigate  to home'),
                     ),
                   ],

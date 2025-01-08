@@ -12,11 +12,14 @@ class HomeView extends StatelessWidget {
         viewModelBuilder: () => HomeViewModel(),
         builder: (context, viewModel, child) {
           return Scaffold(
-            body: Column(
-              children: [
-                Text('Counter Value'),
-                
-              ],
+            body: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(viewModel.counterService.counterValue.toString()),
+                  
+                ],
+              ),
             ),
           );
         });
